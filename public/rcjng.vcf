@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//iOS 18.5//EN
+N:Jiang;Robert;;;
+FN:Robert Jiang
+ORG:Palantir;
+EMAIL;type=INTERNET;type=HOME;type=pref:robertcjiang@gmail.com
+TEL;type=CELL;type=VOICE;type=pref:1 (503) 810-9393
+item1.ADR;type=HOME;type=pref:;;;San Mateo;CA;;United States
+item1.X-ABADR:us
+item2.URL;type=pref:https://rcjng.com
+item2.X-ABLabel:_$!<HomePage>!$_
+X-SHARED-PHOTO-DISPLAY-PREF:ALWAYS_ASK
+REV:2025-08-03T20:57:52Z
+X-IMAGETYPE:PHOTO
+X-IMAGEHASH:cdt6SmwivEE2VsOSEueLag==
+END:VCARD
