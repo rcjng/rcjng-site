@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { fetchRcjngPortfolio } from "@/_apis/fetchRcjngPortfolio";
 import { ExperiencesSectionAcademic } from "./ExperiencesSectionAcademic";
 import { ExperiencesSectionProfessional } from "./ExperiencesSectionProfessional";
@@ -7,6 +7,7 @@ import { HomeLayout } from "./HomeLayout";
 import { LocationSection } from "./LocationSection";
 import { ExperienceType } from "@/_types/ExperienceType";
 import { Footer } from "./Footer";
+import { LoadingPlaceholder } from "@/_common/LoadingPlaceholder";
 
 export const HomePage = React.memo(function HomePage() {
     const { person, summary, experiences } = fetchRcjngPortfolio();
@@ -17,7 +18,9 @@ export const HomePage = React.memo(function HomePage() {
     const pageTitle = `🧑🏻‍💻 ${person.firstName} ${person.lastName}`;
     return (
         <HomeLayout className={"HomePage"}>
-            <Header title={pageTitle} summary={summary} />
+            <Suspense fallback={<LoadingPlaceholder />}>
+                <Header title={pageTitle} summary={summary} />
+            </Suspense>
             
             <hr />
 

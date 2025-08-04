@@ -16,7 +16,7 @@ const Modal = React.memo(function Modal() {
         return null;
     }
     return (
-        <DialogWrapper>
+        <DialogWrapper searchParams={searchParams}>
             {modalQsp === ModalType.SKILLS && <SkillsDialogContent />}
             {modalQsp === ModalType.CONTACT && <ContactDialogContent />}
             {modalQsp === ModalType.RESUME && <ResumeDialogContent />}

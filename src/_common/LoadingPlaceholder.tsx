@@ -8,7 +8,7 @@ export const LoadingPlaceholder = React.memo(function LoadingPlaceholder({
     message = "Loading..." 
 }: IProps) {
     return (
-        <div className="flex flex-col items-center justify-center min-h-[200px] gap-6 p-8">
+        <div className="flex flex-col items-center justify-center min-h-screen gap-6 p-8">
             {/* Animated spinning circles */}
             <div className="relative">
                 <div className="w-16 h-16 border-4 border-gray-200 dark:border-gray-700 rounded-full animate-spin border-t-blue-500 dark:border-t-blue-400"></div>

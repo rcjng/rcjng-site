@@ -1,15 +1,15 @@
 import { QueryStringParams } from "@/_types/QueryStringParams";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface IProps {
     readonly children: React.ReactNode;
     readonly showClose?: boolean
+    readonly searchParams: URLSearchParams;
 }
 
-export const DialogWrapper = React.memo(function DialogWrapper({ children, showClose = true }: Readonly<IProps>) {
+export const DialogWrapper = React.memo(function DialogWrapper({ children, showClose = true, searchParams }: Readonly<IProps>) {
     const router = useRouter();
-    const searchParams = useSearchParams();
     
     const dialogRef = React.useRef<HTMLDialogElement>(null);
     const closeDialog = React.useCallback(() => {
