@@ -1,5 +1,5 @@
 import React from "react";
-import { IMightHaveClassName } from "@/_types/util";
+import { IMightHaveClassName } from "@/_types/IMightHaveClassName";
 import clsx from "clsx";
 
 interface IProps extends IMightHaveClassName {

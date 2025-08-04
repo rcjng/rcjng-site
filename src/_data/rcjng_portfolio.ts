@@ -156,14 +156,9 @@ export const RCJNG_SUMMARY: Readonly<IPortfolioSummary> = {
     username: "rcjng",
     title: "Software Engineer",
     organization: "Palantir",
-    location: "☀️ San Mateo, CA",
-    description: `
-      <div>👋🌎!</div>
-      <br />
-      <div>I'm a Full-Stack Software Engineer experienced in building scalable, full-stack web and mobile applications. 
-      Currently, I work at Palantir in Palo Alto, CA. 
-      Nowadays, I lean slightly more towards frontend, but previously, my work has been split 50-50 between frontend and backend development!</div>
-    `,
+    location: "🌉 San Mateo, CA",
+    description: `👋🌎! I'm a <strong>Full-Stack Software Engineer, currently at 🔮 Palantir,</strong> experienced in building scalable, full-stack web and mobile applications. 
+      I built this site (<a class="_link" href="https://github.com/rcjng/rcjng-site">📁</a>) over a weekend to pass the time and learn new skills with minimal vibing 🤙. Feel free to look around and reach out 😊!`,
     photoUri: "/profile_photo_2500x2500.png",
     photoAltText: "Rob at the Griffith Observatory",
     resumeRid: "1Fv_pmVRsmLcegiHDmO9AyOseKZWTNXPbqW1lr0Yij64"

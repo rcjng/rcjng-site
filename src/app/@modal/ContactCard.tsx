@@ -22,6 +22,8 @@ export const ContactCard = React.memo(function ContactCard({ contactCard }: IPro
                         src={contactCard.photoUri}
                         alt={contactCard.photoAltText}
                         fill
+                        priority={false}
+                        sizes="64px"
                         loading="eager"
                         className="rounded-full object-contain"
                     />

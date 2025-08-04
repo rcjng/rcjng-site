@@ -26,7 +26,7 @@ export const Footer = React.memo(async function Footer({ name }: Readonly<IProps
                 : undefined}
 
             <p className="text-center text-sm text-gray-500">
-                🚀 Built with <span className="font-bold">Next.js</span> ⚛️, <span className="font-bold">Tailwind CSS</span> 💨, and <span className="font-bold">Windsurf 🌊</span>. 
+                🚀 Built with ⚛️ <span className="font-bold">Next.js</span>, 💨 <span className="font-bold">Tailwind CSS</span>, and 🌊 <span className="font-bold">Windsurf</span>. 
             </p>
 
             <p className="text-center text-sm text-gray-500">

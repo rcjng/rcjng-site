@@ -25,6 +25,10 @@ export default function RootLayout({
       >
         <Suspense fallback={<LoadingPlaceholder />}>
           {children}
+        </Suspense>
+
+        {/* Do not use fallback as it is a parallel route */}
+        <Suspense>
           {modal}
         </Suspense>
       </body>

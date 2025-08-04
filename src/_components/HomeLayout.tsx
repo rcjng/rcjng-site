@@ -1,4 +1,4 @@
-import { IMightHaveClassName } from "@/_types/util";
+import { IMightHaveClassName } from "@/_types/IMightHaveClassName";
 import clsx from "clsx";
 import React, { ReactNode } from "react";
 

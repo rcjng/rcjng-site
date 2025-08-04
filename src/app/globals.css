@@ -24,7 +24,7 @@ body, dialog {
   color: var(--foreground);
   font-family: var(--font-jetbrains-mono);
   white-space: normal;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
   hyphens: auto;
 }
 
