@@ -15,7 +15,7 @@ export const ResumeDialogContent = React.memo(function ResumeDialogContent() {
             
             <div className="flex items-center gap-2">
                 <span>📝</span>
-                <a href={googleDocsResumeUrl} target="_blank" rel="noopener noreferrer" className="_link">Google Docs</a>
+                <a href={googleDocsResumeUrl} target="_blank" rel="noopener noreferrer" className="_link">View in Google Docs↗️</a>
             </div>
         </div>
     );

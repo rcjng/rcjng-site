@@ -29,7 +29,7 @@ export const ExperiencesListItem = React.memo(function ExperiencesListItem({ exp
         ? `${organizationName}`
         : (
             <a href={organizationSiteUrl} target="_blank" rel="noopener noreferrer" className="_link">
-                {organizationName}
+                {organizationName}↗️
             </a>
         );
 

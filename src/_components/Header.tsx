@@ -51,10 +51,10 @@ export const Header = React.memo(function Header({ name, summary }: Readonly<IPr
                         <span>📩 <button type="button" onClick={onModalButtonClick(ModalType.CONTACT)} className="_link">Contact</button></span>
                     </li>
                     <li>
-                        <span>🔗 <a href={`https://www.linkedin.com/in/${summary.username}`} target="_blank" rel="noopener noreferrer" className="_link">LinkedIn</a></span>
+                        <span>🔗 <a href={`https://www.linkedin.com/in/${summary.username}`} target="_blank" rel="noopener noreferrer" className="_link">LinkedIn↗️</a></span>
                     </li>
                     <li>
-                        <span>🐙 <a href={`https://github.com/${summary.username}`} target="_blank" rel="noopener noreferrer" className="_link">GitHub</a></span>
+                        <span>🐙 <a href={`https://github.com/${summary.username}`} target="_blank" rel="noopener noreferrer" className="_link">GitHub↗️</a></span>
                     </li>
                 </ul>
             </div>

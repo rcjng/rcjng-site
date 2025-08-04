@@ -36,7 +36,7 @@ export const Footer = React.memo(function Footer({ name }: Readonly<IProps>) {
                 ) : undefined}
 
             <p className="text-center text-sm text-gray-500">
-                🚀 Built with ⚛️ <span className="font-bold">Next.js</span>, 💨 <span className="font-bold">Tailwind CSS</span>, and 🌊 <span className="font-bold">Windsurf</span>. 
+                🚀 Built with ⚛️ <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" className="_link">Next.js↗️</a>, 💨 <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" className="_link">Tailwind CSS↗️</a>, and 🌊 <a href="https://windsurf.com/" target="_blank" rel="noopener noreferrer" className="_link">Windsurf↗️</a>. 
             </p>
 
             <p className="text-center text-sm text-gray-500">

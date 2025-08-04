@@ -13,7 +13,7 @@ export const ContactCard = React.memo(function ContactCard({ contactCard }: IPro
       <div className="absolute top-2 left-2 w-full h-full rounded-3xl -z-10"></div>
 
       {/* Main card */}
-      <div className="bg-[#ffeae2] rounded-3xl overflow-hidden text-black">
+      <div className="bg-gradient-to-br from-[#FA8072] to-[#ffe0d4] rounded-3xl overflow-hidden text-black">
         {/* Top section */}
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row p-6">
             <div className="flex flex-col sm:flex-row items-center grow gap-4">
@@ -37,19 +37,19 @@ export const ContactCard = React.memo(function ContactCard({ contactCard }: IPro
                 </div>
             </div>
             <div>
-                <span>📥</span>
+                <span>🪪</span>
                 <a
                     href={contactCard.vCardUri}
                     download
-                    className="underline font-bold text-blue-400 hover:text-blue-900"
+                    className="_link"
                 >
-                    vCard
+                    vCard⬇️
                 </a>
             </div>
         </div>
 
         {/* Bottom section */}
-        <div className="bg-[#FA8072] text-white p-6 space-y-3 text-sm">
+        <div className="bg-gradient-to-tl from-[#1a8039] to-[#a4e0b6] text-white p-6 space-y-3 text-sm">
             <div className="flex flex-row flex-wrap items-center justify-between gap-2">
                 <div className="left flex flex-col items-start gap-2">
                     <div className="flex items-center gap-2">
@@ -66,7 +66,7 @@ export const ContactCard = React.memo(function ContactCard({ contactCard }: IPro
                     <div className="flex items-center gap-2">
                         <span>🌐</span>
                         <a
-                            href={contactCard.website}
+                            href={`https://${contactCard.website}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="_link"
