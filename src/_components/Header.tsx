@@ -7,11 +7,11 @@ import { QueryStringParams } from "@/_types/QueryStringParams";
 import { ModalType } from "@/_types/ModalType";
 
 interface IProps {
-    title: string;
+    name: string;
     summary: IPortfolioSummary;
 }
 
-export const Header = React.memo(function Header({ title, summary }: Readonly<IProps>) {
+export const Header = React.memo(function Header({ name, summary }: Readonly<IProps>) {
     const searchParams = useSearchParams();
     const router = useRouter();
 
@@ -26,8 +26,8 @@ export const Header = React.memo(function Header({ title, summary }: Readonly<IP
         <header className="flex flex-col gap-4">
             <div className="flex justify-center gap-8 flex-col items-start sm:flex-row">
                 <div className="flex flex-col justify-evenly gap-4 h-full">
-                    <h1 className="text-3xl font-bold">{title}</h1>
-                    <p className="text-lg">{summary.description}</p>
+                    <h1 className="text-4xl font-bold">{name}</h1>
+                    <p className="text-lg" dangerouslySetInnerHTML={{ __html: summary.description }} />
                 </div>
                 <div className="m-auto relative w-full min-w-1/4 aspect-square sm:w-1/3">
                     <Image 

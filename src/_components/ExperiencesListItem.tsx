@@ -39,13 +39,13 @@ export const ExperiencesListItem = React.memo(function ExperiencesListItem({ exp
     return (
         <li className="ExperienceListItem flex flex-col gap-4">
             <div className="experienceHeader flex flex-col">
-                <div className="row-1 flex flex-col sm:flex-row justify-between">
+                <div className="row-1 flex flex-col sm:flex-row justify-between text-lg">
                     <h3 className="font-bold w-fit">
                         <span>{organizationEmoji} {OrganizationName}</span>
                     </h3>
                     <p className="w-fit font-bold">{location}</p>
                 </div>
-                <div className="row-2 flex flex-col sm:flex-row justify-between">
+                <div className="row-2 flex flex-col sm:flex-row justify-between text-lg">
                     <p className="w-fit">{title}</p>
                     <p className="w-fit">{startDate} - {endDate}</p>
                 </div>

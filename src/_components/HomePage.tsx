@@ -15,11 +15,11 @@ export const HomePage = React.memo(function HomePage() {
     const professionalExperiences = experiences.filter((experience) => experience.type === ExperienceType.PROFESSIONAL);
     const academicExperiences = experiences.filter((experience) => experience.type === ExperienceType.ACADEMIC);
 
-    const pageTitle = `🧑🏻‍💻 ${person.firstName} ${person.lastName}`;
+    const fullName = `🧑🏻‍💻 ${person.firstName} (${person.nickName}) ${person.lastName}`;
     return (
         <HomeLayout className={"HomePage"}>
             <Suspense fallback={<LoadingPlaceholder />}>
-                <Header title={pageTitle} summary={summary} />
+                <Header name={fullName} summary={summary} />
             </Suspense>
             
             <hr />
@@ -30,7 +30,7 @@ export const HomePage = React.memo(function HomePage() {
 
             <hr />
 
-            <Footer />
+            <Footer name={fullName} />
         </HomeLayout> 
     );
 });

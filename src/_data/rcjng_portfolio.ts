@@ -4,7 +4,6 @@ import { IPerson } from "@/_types/IPerson"
 import { IPortfolio } from "@/_types/IPortfolio";
 import { IPortfolioSummary } from "@/_types/IPortfolioSummary";
 import { ISkill } from "@/_types/ISkill";
-import { ISocial, SocialType } from "@/_types/ISocial"
 import { SkillType } from "@/_types/SkillType";
 
 export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
@@ -143,33 +142,6 @@ export const RCJNG_SKILLS: Readonly<ISkill>[] = [
      },
 ] as const;
 
-export const RCJNG_SOCIALS: Readonly<ISocial>[] = [
-    {
-        type: SocialType.EMAIL,
-        label: "Email",
-        value: "robertcjiang@gmail.com",
-        iconUri: "/icons/email.svg",
-    },
-    {
-        type: SocialType.PHONE,
-        label: "Phone",
-        value: "503-810-9393",
-        iconUri: "/icons/phone.svg"
-    },
-    {
-        type: SocialType.SITE,
-        label: "LinkedIn",
-        value: "https://www.linkedin.com/in/rcjng/",
-        iconUri: "/icons/linkedin.svg"
-    },
-    {
-        type: SocialType.SITE,
-        label: "GitHub",
-        value: "https://github.com/rcjng",
-        iconUri: "/icons/github.svg"
-    },
-] as const;
-
 export const RCJNG_PERSON: IPerson = {
     id: "rcjng",
     username: "rcjng",
@@ -178,7 +150,6 @@ export const RCJNG_PERSON: IPerson = {
     nickName: "Rob",
     email: "robertcjiang@gmail.com",
     phone: "+1 503-810-9393",
-    socials: RCJNG_SOCIALS,
 } as const;
 
 export const RCJNG_SUMMARY: Readonly<IPortfolioSummary> = {
@@ -187,10 +158,11 @@ export const RCJNG_SUMMARY: Readonly<IPortfolioSummary> = {
     organization: "Palantir",
     location: "☀️ San Mateo, CA",
     description: `
-      👋🌎! 
-      I'm a Full-Stack Software Engineer experienced in building scalable, full-stack web and mobile applications. 
+      <div>👋🌎!</div>
+      <br />
+      <div>I'm a Full-Stack Software Engineer experienced in building scalable, full-stack web and mobile applications. 
       Currently, I work at Palantir in Palo Alto, CA. 
-      Nowadays, I lean slight more towards frontend, but previously (and desireably) I've been 50:50 split between frontend and backend development!
+      Nowadays, I lean slightly more towards frontend, but previously, my work has been split 50-50 between frontend and backend development!</div>
     `,
     photoUri: "/profile_photo_2500x2500.png",
     photoAltText: "Rob at the Griffith Observatory",

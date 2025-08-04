@@ -8,7 +8,11 @@ interface Commit {
     };
 }
 
-export const Footer = React.memo(async function Footer() {
+interface IProps {
+    readonly name: string;
+}
+
+export const Footer = React.memo(async function Footer({ name }: Readonly<IProps>) {
     const lastCommitDate = await getLastCommitDate();
 
     return (
@@ -22,11 +26,11 @@ export const Footer = React.memo(async function Footer() {
                 : undefined}
 
             <p className="text-center text-sm text-gray-500">
-                🚀 Built with <span className="font-bold">Next.js</span> ⚛️, <span className="font-bold">Tailwind CSS</span> 💨, and <span className="font-bold">Windsurf.</span> 🌊
+                🚀 Built with <span className="font-bold">Next.js</span> ⚛️, <span className="font-bold">Tailwind CSS</span> 💨, and <span className="font-bold">Windsurf 🌊.</span> 
             </p>
 
             <p className="text-center text-sm text-gray-500">
-                ©️ {new Date().getFullYear()} Robert Jiang. All rights reserved.
+                ©️ {new Date().getFullYear()} {name}. All rights reserved.
             </p>
         </footer>
     );
