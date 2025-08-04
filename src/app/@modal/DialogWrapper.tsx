@@ -1,5 +1,4 @@
 import { QueryStringParams } from "@/_types/QueryStringParams";
-import { useRouter } from "next/navigation";
 import React from "react";
 
 interface IProps {
@@ -8,46 +7,50 @@ interface IProps {
     readonly searchParams: URLSearchParams;
 }
 
-export const DialogWrapper = React.memo(function DialogWrapper({ children, showClose = true, searchParams }: Readonly<IProps>) {
-    const router = useRouter();
-    
+export const DialogWrapper = React.memo(function DialogWrapper(
+    { children, showClose = true, searchParams }: Readonly<IProps>
+) {
     const dialogRef = React.useRef<HTMLDialogElement>(null);
+    
     const closeDialog = React.useCallback(() => {
         const newSearchParams = new URLSearchParams(searchParams);
         newSearchParams.delete(QueryStringParams.MODAL);
-        router.push(`?${newSearchParams.toString()}`, { scroll: false });
-    }, [router, searchParams]);
+        window.history.replaceState(null, '', `?${newSearchParams.toString()}`);
+    }, [searchParams]);
     
-    const handleOutsideClick = React.useCallback((event: MouseEvent) => {
-        const dialog = dialogRef.current
-        if (!dialog || !dialog.open) return
-
-        const rect = dialog.getBoundingClientRect()
-        const clickedInside =
+    const handleBackdropClick = React.useCallback((event: React.MouseEvent<HTMLDialogElement>) => {
+        const dialog = dialogRef.current;
+        if (dialog == null) return;
+        
+        const rect = dialog.getBoundingClientRect();
+        const clickedInDialog = 
             event.clientX >= rect.left &&
             event.clientX <= rect.right &&
             event.clientY >= rect.top &&
-            event.clientY <= rect.bottom
-
-        if (!clickedInside) {
+            event.clientY <= rect.bottom;
+            
+        if (!clickedInDialog) {
             closeDialog();
         }
-    }, [closeDialog, dialogRef]);
+    }, [closeDialog]);
     
     React.useEffect(() => {
-        window.addEventListener('mousedown', handleOutsideClick)
-        return () => {
-            window.removeEventListener('mousedown', handleOutsideClick)
+        const dialog = dialogRef.current;
+        if (dialog != null && !dialog.open) {
+            dialog.showModal();
         }
-    }, [handleOutsideClick]);
-    
-    React.useEffect(() => {
-        dialogRef.current?.showModal();
+        
+        return () => {
+            if (dialog != null && dialog.open) {
+                dialog.close();
+            }
+        };
     }, []);
     return (
         <dialog 
-            ref={dialogRef} 
-            className="_card pt-6 pb-6 pl-12 pr-12 rounded shadow-xl top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] flex flex-col gap-4 items-end backdrop:bg-black/50 backdrop:backdrop-blur-sm"
+            ref={dialogRef}
+            className="_card pt-6 pb-6 pl-12 pr-12 rounded shadow-xl flex flex-col gap-4 items-end max-w-[90vw] max-h-[90vh] overflow-auto backdrop:bg-black/50 backdrop:backdrop-blur-sm fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 m-0"
+            onClick={handleBackdropClick}
         >
             {children}
 

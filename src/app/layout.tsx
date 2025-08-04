@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from 'next/font/google';
-
 import "./globals.css";
-import { Suspense } from "react";
-import { LoadingPlaceholder } from "@/_common/LoadingPlaceholder";
+import React from "react";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -23,14 +21,8 @@ export default function RootLayout({
       <body
         className={`${jetBrainsMono.variable} antialiased ._font-color`}
       >
-        <Suspense fallback={<LoadingPlaceholder />}>
-          {children}
-        </Suspense>
-
-        {/* Do not use fallback as it is a parallel route */}
-        <Suspense>
-          {modal}
-        </Suspense>
+        {children}
+        {modal}
       </body>
     </html>
   );

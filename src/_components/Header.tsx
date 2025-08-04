@@ -1,9 +1,7 @@
-'use client'
-
 import React from "react";
 import Image from "next/image";
 import { IPortfolioSummary } from "@/_types/IPortfolioSummary";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { QueryStringParams } from "@/_types/QueryStringParams";
 import { ModalType } from "@/_types/ModalType";
 
@@ -13,25 +11,14 @@ interface IProps {
 }
 
 export const Header = React.memo(function Header({ name, summary }: Readonly<IProps>) {
-    const [isClientMounted, setIsClientMounted] = React.useState(false)
-
     const searchParams = useSearchParams();
-    const router = useRouter();
 
     const onModalButtonClick = React.useCallback((modalType: ModalType) => () => {
         const newSearchParams = new URLSearchParams(searchParams);
         newSearchParams.set(QueryStringParams.MODAL, modalType);
-        
-        router.push(`?${newSearchParams.toString()}`, { scroll: false });
-    }, [router, searchParams]);
+        window.history.replaceState(null, "", `?${newSearchParams.toString()}`);
+    }, [searchParams]);
 
-    React.useEffect(() => {
-        setIsClientMounted(true)
-    }, [])
-
-    if (!isClientMounted) {
-        return null;
-    }
     return (
         <header className="flex flex-col gap-4">
             <div className="flex justify-center gap-8 flex-col items-start sm:flex-row">
