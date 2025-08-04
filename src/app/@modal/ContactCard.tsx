@@ -13,7 +13,7 @@ export const ContactCard = React.memo(function ContactCard({ contactCard }: IPro
       <div className="absolute top-2 left-2 w-full h-full rounded-3xl -z-10"></div>
 
       {/* Main card */}
-      <div className="bg-[#FFE9E0] rounded-3xl overflow-hidden text-black">
+      <div className="bg-[#ffeae2] rounded-3xl overflow-hidden text-black">
         {/* Top section */}
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row p-6">
             <div className="flex flex-col sm:flex-row items-center grow gap-4">
@@ -22,7 +22,7 @@ export const ContactCard = React.memo(function ContactCard({ contactCard }: IPro
                         src={contactCard.photoUri}
                         alt={contactCard.photoAltText}
                         fill
-                        priority={false}
+                        priority
                         sizes="64px"
                         loading="eager"
                         className="rounded-full object-contain"

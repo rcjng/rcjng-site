@@ -55,7 +55,7 @@ export const ExperiencesListItem = React.memo(function ExperiencesListItem({ exp
             </div>
 
             {summary != null 
-                ? <pre className="outline outline-gray-400 p-4 rounded text-sm whitespace-pre-wrap break-words">
+                ? <pre className="outline-2 outline-gray-400 p-4 rounded text-sm whitespace-pre-wrap break-words">
                     <code className="summary">BLUF: {summary}</code>
                 </pre> 
                 : null}
