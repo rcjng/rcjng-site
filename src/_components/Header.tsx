@@ -15,21 +15,7 @@ export const Header = React.memo(function Header({ title, summary }: Readonly<IP
     const searchParams = useSearchParams();
     const router = useRouter();
 
-    const onViewSkillsClick = React.useCallback(() => {
-        const newSearchParams = new URLSearchParams(searchParams);
-        newSearchParams.set(QueryStringParams.MODAL, ModalType.SKILLS);
-        
-        router.push(`?${newSearchParams.toString()}`, { scroll: false });
-    }, [router, searchParams]);
-
-    const onViewResumeClick = React.useCallback(() => {
-        const newSearchParams = new URLSearchParams(searchParams);
-        newSearchParams.set(QueryStringParams.MODAL, ModalType.RESUME);
-        
-        router.push(`?${newSearchParams.toString()}`, { scroll: false });
-    }, [router, searchParams]);
-
-    const onModalClick = React.useCallback((modalType: ModalType) => () => {
+    const onModalButtonClick = React.useCallback((modalType: ModalType) => () => {
         const newSearchParams = new URLSearchParams(searchParams);
         newSearchParams.set(QueryStringParams.MODAL, modalType);
         
@@ -56,13 +42,13 @@ export const Header = React.memo(function Header({ title, summary }: Readonly<IP
 
             <ul className="flex flex-wrap justify-center gap-4">
                 <li>
-                    <span>🧠 <button type="button" onClick={onModalClick(ModalType.SKILLS)} className="_link">Skills</button></span>
+                    <span>🧠 <button type="button" onClick={onModalButtonClick(ModalType.SKILLS)} className="_link">Skills</button></span>
                 </li>
                 <li>
-                    <span>📄 <button type="button" onClick={onModalClick(ModalType.RESUME)} className="_link">Resume</button></span>
+                    <span>📄 <button type="button" onClick={onModalButtonClick(ModalType.RESUME)} className="_link">Resume</button></span>
                 </li>
                 <li>
-                    <span>📩 <button type="button" onClick={onModalClick(ModalType.CONTACT)} className="_link">Contact</button></span>
+                    <span>📩 <button type="button" onClick={onModalButtonClick(ModalType.CONTACT)} className="_link">Contact</button></span>
                 </li>
                 <li>
                     <span>🔗 <a href={`https://www.linkedin.com/in/${summary.username}`} target="_blank" rel="noopener noreferrer" className="_link">LinkedIn</a></span>

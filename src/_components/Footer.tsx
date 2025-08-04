@@ -1,4 +1,3 @@
-import { fetchRcjngPortfolio } from "@/_apis/fetchRcjngPortfolio";
 import React from "react";
 
 interface Commit {
