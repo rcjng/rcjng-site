@@ -15,7 +15,8 @@ const DATE_FORMATTER = new Intl.DateTimeFormat("en-US", {
 export const ExperiencesListItem = React.memo(function ExperiencesListItem({ experience }: IProps) {
     const {
         title,
-        organizationName,
+        organizationTitle,
+        organizationSubTitle,
         organizationEmoji,
         organizationSiteUrl,
         location,
@@ -23,41 +24,42 @@ export const ExperiencesListItem = React.memo(function ExperiencesListItem({ exp
         endDateIso,
         summary,
         descriptions,
-        technologies,
+        skillsAndAwards,
     } = experience;
-    const OrganizationName = organizationSiteUrl == null 
-        ? `${organizationName}`
+    const OrganizationTitle = organizationSiteUrl == null 
+        ? `${organizationTitle}`
         : (
             <a href={organizationSiteUrl} target="_blank" rel="noopener noreferrer" className="_link">
-                {organizationName}↗️
+                {organizationTitle}↗️
             </a>
         );
 
     const startDate = DATE_FORMATTER.format(new Date(startDateIso));
     const endDate = endDateIso == null ? DEFAULT_END_DATE : DATE_FORMATTER.format(new Date(endDateIso));
-    const technologiesList = technologies?.join(", ");
+    const skillsAndAwardsList = skillsAndAwards?.join(", ");
     return (
         <li className="ExperienceListItem flex flex-col gap-4">
             <div className="experienceHeader flex flex-col">
                 <div className="row-1 flex flex-col sm:flex-row justify-between text-lg">
                     <h3 className="font-bold w-fit">
-                        <span>{organizationEmoji} {OrganizationName}</span>
+                        <span>{organizationEmoji} {OrganizationTitle}</span>
                     </h3>
-                    <p className="w-fit font-bold">{location}</p>
+                    <p className="w-fit font-bold">{organizationSubTitle}</p>
                 </div>
                 <div className="row-2 flex flex-col sm:flex-row justify-between text-lg">
                     <p className="w-fit">{title}</p>
                     <p className="w-fit">{startDate} - {endDate}</p>
                 </div>
                 <div className="row-3 flex flex-col sm:flex-row justify-between">
-                    <p className="w-fit italic">{technologiesList}</p>
+                    <p className="w-fit italic">{skillsAndAwardsList}</p>
+                    <p className="w-fit">{location}</p>
                 </div>
             </div>
 
             {summary != null 
                 ? <pre className="outline-2 outline-gray-400 p-4 rounded text-sm whitespace-pre-wrap break-words">
                     <code className="summary">BLUF: {summary}</code>
-                </pre> 
+                </pre>
                 : null}
             <ul className="description flex flex-col gap-1">
                 {descriptions?.map((description, index) => <ExperiencesDescriptionListItem key={index} description={description} />)}

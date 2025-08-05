@@ -4,7 +4,8 @@ export interface IExperience {
     readonly id: string;
     readonly type: ExperienceType;
     readonly title: string;
-    readonly organizationName: string;
+    readonly organizationTitle: string;
+    readonly organizationSubTitle?: string;
     readonly organizationEmoji: string;
     readonly organizationSiteUrl?: string;
     readonly location?: string;
@@ -12,5 +13,5 @@ export interface IExperience {
     readonly endDateIso?: string;
     readonly summary?: string;
     readonly descriptions?: readonly string[];
-    readonly technologies?: readonly string[];
+    readonly skillsAndAwards?: readonly string[];
 }

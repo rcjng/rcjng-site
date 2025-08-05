@@ -11,22 +11,24 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
         id: "UCSD-09-2020",
         type: ExperienceType.ACADEMIC,
         title: "Bachelor of Science, Computer Science",
-        organizationName: "University of California, San Diego",
+        organizationTitle: "University of California, San Diego",
+        organizationSubTitle: "3.84/4.00 GPA",
         organizationEmoji: "🧜‍♂",
         organizationSiteUrl: "https://www.ucsd.edu/",
         location: "La Jolla, CA",
+        skillsAndAwards: ["Regents Scholar"],
         startDateIso: "2020-09-24",
         endDateIso: "2023-03-24",
-        descriptions: [`<strong>3.84/4.00</strong> GPA`, `Regents Scholar`]
     },
     {
         id: "Werfen-06-2022",
         type: ExperienceType.PROFESSIONAL,
         title: "Software Engineer Intern",
-        organizationName: "Werfen",
+        organizationTitle: "Werfen",
+        organizationSubTitle: "R&D",
         organizationEmoji: "🩸",
         organizationSiteUrl: "https://werfen.com/",
-        location: "R&D",
+        location: "San Diego, CA",
         startDateIso: "2022-06-13T07:00:00.000Z",
         endDateIso: "2023-03-24T07:00:00.000Z",
         summary: "At Werfen, I worked on the Whole Blood Hemostasis R&D team, primarily developing new features and internal testing tools for [REDACTED], an upcoming Class II whole blood hemostasis medical device.",
@@ -35,16 +37,17 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
             `<strong>Decreased debugging time by 10%</strong> by adding object-oriented telemetry and debugging interfaces, I2C heater sensor sampling, and analog-to-digital conversion in C/C++.`,
             `<strong>Increased testing efficiency by 20%</strong> by extending Python testing and automation scripts (NumPy, SciPy, Matplotlib, pandas, Tkinter) for optimal device simulation, calibration, and report generation.`
          ],  
-        technologies: ["C/C++", "Python", "NumPy", "Matplotlib", "Pandas", "Tkinter"]
+        skillsAndAwards: ["C/C++", "Python", "NumPy", "Matplotlib", "Pandas", "Tkinter"]
     },
     {
         id: "Epic-04-2023",
         type: ExperienceType.PROFESSIONAL,
         title: "Software Engineer",
-        organizationName: "Epic",
+        organizationTitle: "Epic",
+        organizationSubTitle: "MyChart",
         organizationEmoji: "🗂️",
         organizationSiteUrl: "https://www.epic.com/",
-        location: "MyChart",
+        location: "Madison, WI",
         startDateIso: "2023-04-03T07:00:00.000Z",
         endDateIso: "2025-06-16T07:00:00.000Z",
         summary: "At Epic, I worked on MyChart's provider discovery, online scheduling, and appointment management team, primarily spearheading a multi-year, cross-platform, full-stack migration of the Visits List and Visit Details activities.",
@@ -58,16 +61,17 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
             `Uncovered critical silent-failure bugs by implementing 100% input validation in appointment management Epic APIs serving 150M+ requests annually across 5 patient portals.`,
             `Added launch mode support in MyChart for 3rd-party SAML, Smart-on-FHIR, and Web PACS integration links, aiding pre-visit preparation, video visit launching, hardware testing, and building wayfinding.`
          ],
-        technologies: ["TypeScript", "React", "Redux", "C#/.NET", "Jest", "Sass", "Java", "Swift"]
+        skillsAndAwards: ["TypeScript", "React", "Redux", "C#/.NET", "Jest", "Sass", "Java", "Swift"]
     },
     {
         id: "Palantir-06-2025",
         type: ExperienceType.PROFESSIONAL,
         title: "Software Engineer",
-        organizationName: "Palantir",
+        organizationTitle: "Palantir",
+        organizationSubTitle: "Gotham",
         organizationEmoji: "🔮",
         organizationSiteUrl: "https://www.palantir.com/",
-        location: "Gotham",
+        location: "Palo Alto, CA",
         startDateIso: "2025-06-23T07:00:00.000Z",
         endDateIso: undefined,
         summary: "At Palantir, I work on Gotham's product care team, primarily developing new enhancements and debugging existing features to ensure optimal quality, usability, and performance.",
@@ -75,7 +79,7 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
          `<strong>Improved Gotham graph table column expansion load time by an average of 27%</strong> by trimming Redux Saga workers, optimizing idempotent Redux actions, and applying targeted memoization.`,
          `<strong>Boosted Gotham Listogram keyboard navigation efficiency by 20% across workflows</strong> by adding accelerator keys and power-user shortcuts.`,
         ],
-        technologies: ["TypeScript", "React", "Redux", "Redux-Saga", "Sass", "Java", "Docker"]
+        skillsAndAwards: ["TypeScript", "React", "Redux", "Redux-Saga", "Sass", "Java", "Docker"]
     }
 ]  as const;
 
