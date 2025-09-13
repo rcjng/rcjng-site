@@ -33,7 +33,7 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
         endDateIso: "2023-03-24T07:00:00.000Z",
         summary: "At Werfen, I worked on the Whole Blood Hemostasis R&D team, primarily developing new features and internal testing tools for [REDACTED], an upcoming Class II whole blood hemostasis medical device.",
         descriptions: [
-            `<strong>Achieved ~5% RSD in sensor sampling accuracy</strong> by developing a diagnostic test suite for thermal, pneumatic, optical, and cooling subsystems of a Class II whole blood hemostasis testing device.`,
+            `<strong>Achieved ~5% relative standard deviation in sensor sampling accuracy</strong> by developing a diagnostic test suite for thermal, pneumatic, optical, and cooling subsystems of a Class II whole blood hemostasis testing device.`,
             `<strong>Decreased debugging time by 10%</strong> by adding object-oriented telemetry and debugging interfaces, I2C heater sensor sampling, and analog-to-digital conversion in C/C++.`,
             `<strong>Increased testing efficiency by 20%</strong> by extending Python testing and automation scripts (NumPy, SciPy, Matplotlib, pandas, Tkinter) for optimal device simulation, calibration, and report generation.`
          ],  
@@ -78,6 +78,7 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
         descriptions: [
          `<strong>Improved Gotham graph table column expansion load time by an average of 27%</strong> by trimming Redux Saga workers, optimizing idempotent Redux actions, and applying targeted memoization.`,
          `<strong>Boosted Gotham Listogram keyboard navigation efficiency by 20% across workflows</strong> by adding accelerator keys and power-user shortcuts.`,
+         `<strong>Ensured 100% data accuracy across property types</strong> in Gotham graph table by developing a Java (Witchcraft) API endpoint and improving Redux state row data indexing for column-cell mappings.`
         ],
         skillsAndAwards: ["TypeScript", "React", "Redux", "Redux-Saga", "Sass", "Java", "Docker"]
     }
