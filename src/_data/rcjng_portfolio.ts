@@ -97,7 +97,7 @@ export const RCJNG_SKILLS: Readonly<ISkill>[] = [
         type: SkillType.FRONTEND,
      },
      {
-        name: "Sass",
+        name: "CSS/Sass",
         type: SkillType.FRONTEND,
      },
      {
@@ -121,7 +121,11 @@ export const RCJNG_SKILLS: Readonly<ISkill>[] = [
         type: SkillType.BACKEND,
      },
      {
-        name: "GraphQL",
+        name: "Dagger",
+        type: SkillType.BACKEND,
+     },
+     {
+        name: "REST APIs",
         type: SkillType.BACKEND,
      },
      {
@@ -144,6 +148,14 @@ export const RCJNG_SKILLS: Readonly<ISkill>[] = [
         name: "Enzyme",
         type: SkillType.TESTING,
      },
+     {
+        name: "JUnit",
+        type: SkillType.TESTING,
+     },
+     {
+        name: "Docker",
+        type: SkillType.BACKEND,
+     }
 ] as const;
 
 export const RCJNG_PERSON: IPerson = {
