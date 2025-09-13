@@ -18,6 +18,12 @@ export const DialogWrapper = React.memo(function DialogWrapper(
         window.history.replaceState(null, '', `?${newSearchParams.toString()}`);
     }, [searchParams]);
     
+    const handleKeyDown = React.useCallback((event: KeyboardEvent) => {
+        if (event.key === 'Escape') {
+            closeDialog();
+        }
+    }, [closeDialog]);
+    
     const handleBackdropClick = React.useCallback((event: React.MouseEvent<HTMLDialogElement>) => {
         const dialog = dialogRef.current;
         if (dialog == null) return;
@@ -39,13 +45,16 @@ export const DialogWrapper = React.memo(function DialogWrapper(
         if (dialog != null && !dialog.open) {
             dialog.showModal();
         }
-        
+
+        window.addEventListener('keydown', handleKeyDown);
         return () => {
             if (dialog != null && dialog.open) {
                 dialog.close();
             }
+            window.removeEventListener('keydown', handleKeyDown);
         };
-    }, []);
+    }, [handleKeyDown]);
+    
     return (
         <dialog 
             ref={dialogRef}
