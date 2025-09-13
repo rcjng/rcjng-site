@@ -31,7 +31,8 @@ export const Footer = React.memo(function Footer({ name }: Readonly<IProps>) {
             {lastCommitDate != null 
                 ? (
                     <p className="text-center text-sm text-gray-500">
-                        <span>📅 Last updated: <span className="font-bold">{lastCommitDate}</span>.</span>
+                        <span>📅 Last updated: <span className="font-bold">{lastCommitDate}</span></span>
+                        <span> (📁 <a className="_link" href="https://github.com/rcjng/rcjng-site" target="_blank" rel="noopener noreferrer">Repository↗️</a>).</span>
                     </p>
                 ) : undefined}
 

@@ -5,5 +5,5 @@ export interface IPerson {
     readonly lastName: string;
     readonly nickName: string;
     readonly email: string;
-    readonly phone: string;
+    readonly phone?: string;
 }
