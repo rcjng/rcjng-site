@@ -174,7 +174,7 @@ export const RCJNG_SUMMARY: Readonly<IPortfolioSummary> = {
     organization: "Palantir",
     location: "🌉 San Mateo, CA",
     description: `
-    <div>/*</div>
+    <div>/**</div>
     <div>&nbsp;* SWE <a href="https://palantir.com" target="_blank" rel="noopener noreferrer" class="_link">@Palantir↗</a>.</div>
     <div>&nbsp;* ChatGPT rapper.</div>
     <div>&nbsp;* Stand(ing desk) user.</div>
