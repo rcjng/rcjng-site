@@ -37,7 +37,7 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
             `<strong>Decreased debugging time by 10%</strong> by adding object-oriented telemetry and debugging interfaces, I2C heater sensor sampling, and analog-to-digital conversion in C/C++.`,
             `<strong>Increased testing efficiency by 20%</strong> by extending Python testing and automation scripts (NumPy, SciPy, Matplotlib, pandas, Tkinter) for optimal device simulation, calibration, and report generation.`
          ],  
-        skillsAndAwards: ["C/C++", "Python", "NumPy", "Matplotlib", "Pandas", "Tkinter"]
+        skillsAndAwards: ["Python", "C/C++"]
     },
     {
         id: "Epic-04-2023",
@@ -61,7 +61,7 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
             `Uncovered critical silent-failure bugs by implementing 100% input validation in appointment management Epic APIs serving 150M+ requests annually across 5 patient portals.`,
             `Added launch mode support in MyChart for 3rd-party SAML, Smart-on-FHIR, and Web PACS integration links, aiding pre-visit preparation, video visit launching, hardware testing, and building wayfinding.`
          ],
-        skillsAndAwards: ["TypeScript", "React", "Redux", "C#/.NET", "Jest", "Sass", "Java", "Swift"]
+        skillsAndAwards: ["C#/.NET", "Java", "TypeScript", "React", "Redux", "HTML/CSS", "Jest", "Swift"]
     },
     {
         id: "Palantir-06-2025",
@@ -80,7 +80,7 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
          `<strong>Boosted Gotham Listogram keyboard navigation efficiency by 20% across workflows</strong> by adding accelerator keys and power-user shortcuts.`,
          `<strong>Ensured 100% data accuracy across property types</strong> in Gotham graph table by developing a Java (Witchcraft) API endpoint and improving Redux state row data indexing for column-cell mappings.`
         ],
-        skillsAndAwards: ["TypeScript", "React", "Redux", "Redux-Saga", "Sass", "Java", "Docker"]
+        skillsAndAwards: ["Java", "TypeScript", "React", "Redux", "Dagger", "Docker", "HTML/CSS"]
     }
 ]  as const;
 
@@ -173,7 +173,12 @@ export const RCJNG_SUMMARY: Readonly<IPortfolioSummary> = {
     title: "Software Engineer",
     organization: "Palantir",
     location: "🌉 San Mateo, CA",
-    description: `👋🌎! I'm a <strong>Full-Stack Software Engineer, currently at 🔮 Palantir</strong>. I can hold a conversation with ChatGPT and have over decades of experience Googling things.`,
+    description: `
+    <div>/*</div>
+    <div>&nbsp;* Dev <a href="https://palantir.com/" target="_blank" rel="noopener noreferrer" class="_link">@Palantir</a>.</div>
+    <div>&nbsp;* ChatGPT rapper.</div>
+    <div>&nbsp;* Stand(ing desk) user.</div>
+    <div>&nbsp;*/</div>`,
     photoUri: "/profile_photo_2500x2500.png",
     photoAltText: "Rob at the Griffith Observatory in Los Angeles, CA",
     resumeRid: "1Fv_pmVRsmLcegiHDmO9AyOseKZWTNXPbqW1lr0Yij64"
