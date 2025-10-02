@@ -61,7 +61,7 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
             `Uncovered critical silent-failure bugs by implementing 100% input validation in appointment management Epic APIs serving 150M+ requests annually across 5 patient portals.`,
             `Added launch mode support in MyChart for 3rd-party SAML, Smart-on-FHIR, and Web PACS integration links, aiding pre-visit preparation, video visit launching, hardware testing, and building wayfinding.`
          ],
-        skillsAndAwards: ["C#/.NET", "Java", "TypeScript", "React", "Redux", "HTML/CSS", "Jest", "Swift"]
+        skillsAndAwards: ["C#/.NET", "Java", "TypeScript", "React", "Redux", "HTML/CSS/SASS", "Jest", "Swift"]
     },
     {
         id: "Palantir-06-2025",
@@ -76,11 +76,13 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
         endDateIso: undefined,
         summary: "At Palantir, I work on Gotham's product care team, primarily developing new enhancements and debugging existing features to ensure optimal quality, usability, and performance.",
         descriptions: [
+         `<strong>Cut average setup time by 20-40% per Gotham graph export</strong> by designing and developing column presets, enabling users to create, update, load, delete, and securely share export preferences.`,
          `<strong>Improved Gotham graph table column expansion load time by an average of 27%</strong> by trimming Redux Saga workers, optimizing idempotent Redux actions, and applying targeted memoization.`,
-         `<strong>Boosted Gotham Listogram keyboard navigation efficiency by 20% across workflows</strong> by adding accelerator keys and power-user shortcuts.`,
-         `<strong>Ensured 100% data accuracy across property types</strong> in Gotham graph table by developing a Java (Witchcraft) API endpoint and improving Redux state row data indexing for column-cell mappings.`
+         `<strong>Increased Gotham Listogram keyboard navigation efficiency by 20% across workflows</strong> by adding accelerator keys and power-user shortcuts.`,
+         `<strong>Boosted data analysis efficiency, saving users 5+ hours/week,</strong> by implementing column sorting (ascending/descending) in Gotham graph table for unsupported property types.`,
+         `<strong>Ensured 100% data accuracy across property types</strong> in Gotham graph table by developing a Java API endpoint and improving Redux state row data indexing for column-cell mappings.`
         ],
-        skillsAndAwards: ["Java", "TypeScript", "React", "Redux", "Dagger", "Docker", "HTML/CSS"]
+        skillsAndAwards: ["Java", "TypeScript", "React", "Redux", "Dagger", "Docker", "HTML/CSS/SASS"]
     }
 ]  as const;
 
