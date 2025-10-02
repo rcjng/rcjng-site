@@ -175,9 +175,11 @@ export const RCJNG_SUMMARY: Readonly<IPortfolioSummary> = {
     location: "🌉 San Mateo, CA",
     description: `
     <div>/**</div>
-    <div>&nbsp;* <a href="https://palantir.com" target="_blank" rel="noopener noreferrer" class="_link">Palantir↗️</a>ian.</div>
-    <div>&nbsp;* ChatGPT rapper.</div>
-    <div>&nbsp;* Stand(ing desk) user.</div>
+    <div>&nbsp;* My current toolchain:</div>
+    <div>&nbsp;* &emsp;VSCodeVim</div>
+    <div>&nbsp;* &emsp;Claude Code CLI + GitHub Copilot Tab Completion</div>
+    <div>&nbsp;* &emsp;iTerm2 + Oh My Zsh</div>
+    <div>&nbsp;* &emsp;Alfred + Rectangle</div>
     <div>&nbsp;*/</div>`,
     photoUri: "/profile_photo_2500x2500.png",
     photoAltText: "Rob at the Griffith Observatory in Los Angeles, CA",
