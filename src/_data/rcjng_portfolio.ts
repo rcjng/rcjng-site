@@ -31,7 +31,7 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
         location: "San Diego, CA",
         startDateIso: "2022-06-13T07:00:00.000Z",
         endDateIso: "2023-03-24T07:00:00.000Z",
-        summary: "At Werfen, I worked on the Whole Blood Hemostasis R&D team, primarily developing new features and internal testing tools for [REDACTED], an upcoming Class II whole blood hemostasis medical device.",
+        summary: "At Werfen, I worked on product development, primarily developing new features and internal testing tools for an upcoming Class II whole blood hemostasis medical device.",
         descriptions: [
             `<strong>Achieved ~5% relative standard deviation in sensor sampling accuracy</strong> by developing a diagnostic test suite for thermal, pneumatic, optical, and cooling subsystems of a Class II whole blood hemostasis testing device.`,
             `<strong>Decreased debugging time by 10%</strong> by adding object-oriented telemetry and debugging interfaces, I2C heater sensor sampling, and analog-to-digital conversion in C/C++.`,
@@ -50,7 +50,7 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
         location: "Madison, WI",
         startDateIso: "2023-04-03T07:00:00.000Z",
         endDateIso: "2025-06-16T07:00:00.000Z",
-        summary: "At Epic, I worked on MyChart's provider discovery, online scheduling, and appointment management team, primarily spearheading a multi-year, cross-platform, full-stack migration of the Visits List and Visit Details activities.",
+        summary: "At Epic, I worked on MyChart's provider discovery, online scheduling, and appointment management team, primarily spearheading a cross-platform, full-stack migration of the Visits List and Visit Details activities.",
         descriptions: [
             `<strong>Reduced MyChart Visits List load time by 24%</strong> by creating an incremental, multi-source data loader with client-side caching and pagination using React and Redux.`,
             `<strong>Saved ~8,840 annual staff hours in phone calls for international orgs</strong> by designing and implementing a full-stack MyChart activity end-to-end to display appointment waiting lists to patients.`,
@@ -74,7 +74,7 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
         location: "Palo Alto, CA",
         startDateIso: "2025-06-23T07:00:00.000Z",
         endDateIso: undefined,
-        summary: "At Palantir, I work on Gotham's product care team, primarily developing new enhancements and debugging existing features to ensure optimal quality, usability, and performance.",
+        summary: "At Palantir, I work on Gotham's product suite, primarily developing enhancements for web and desktop apps and ensuring stability for existing services at deployments.",
         descriptions: [
          `<strong>Cut average setup time by 20-40% per Gotham graph export</strong> by designing and developing column presets, enabling users to create, update, load, delete, and securely share export preferences.`,
          `<strong>Improved Gotham graph table column expansion load time by an average of 27%</strong> by trimming Redux Saga workers, optimizing idempotent Redux actions, and applying targeted memoization.`,
@@ -82,7 +82,7 @@ export const RCJNG_EXPERIENCES: Readonly<IExperience>[] = [
          `<strong>Boosted data analysis efficiency, saving users 5+ hours/week,</strong> by implementing column sorting (ascending/descending) in Gotham graph table for unsupported property types.`,
          `<strong>Ensured 100% data accuracy across property types</strong> in Gotham graph table by developing a Java API endpoint and improving Redux state row data indexing for column-cell mappings.`
         ],
-        skillsAndAwards: ["Java", "TypeScript", "React", "Redux", "Dagger", "Docker", "HTML/CSS/SASS"]
+        skillsAndAwards: ["Java", "C++", "TypeScript", "React", "Redux", "Dagger", "Docker", "HTML/CSS/SASS"]
     }
 ]  as const;
 
