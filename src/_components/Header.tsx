@@ -39,7 +39,7 @@ export const Header = React.memo(function Header({ name, summary }: Readonly<IPr
                         <p className="text-lg" dangerouslySetInnerHTML={{ __html: summary.description }} />
                     </div>
 
-                    <div className="p-[2px] rounded bg-gradient-to-br from-green-700 via-blue-500  to-green-100">
+                    <div className="p-[2px] rounded bg-gradient-to-br from-[var(--solarized-base3)] via-[var(--solarized-base2)] to-[var(--solarized-base1)] dark:from-[var(--solarized-base01)] dark:via-[var(--solarized-base02)] dark:to-[var(--solarized-base03)]">
                         <ul className="flex flex-wrap items-center justify-evenly gap-4 rounded bg-[var(--background)] p-4">
                             {/* <li>
                                 <span>🧠 <button type="button" onClick={onModalButtonClick(ModalType.SKILLS)} className="_link">Skills</button></span>

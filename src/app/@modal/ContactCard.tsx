@@ -8,12 +8,8 @@ interface IProps {
 
 export const ContactCard = React.memo(function ContactCard({ contactCard }: IProps) {
   return (
-    <div className="relative w-[60vw] max-w-lg rounded-3xl shadow-2xl">
-      {/* Background layer */}
-        <div className="absolute top-2 left-2 w-full h-full rounded-3xl -z-10"></div>
-
-        {/* Main card */}
-        <div className="bg-gradient-to-br from-[#fdf6e3] to-[#eee8d5] rounded-3xl overflow-hidden text-black">
+    <div className="relative w-[60vw] max-w-lg rounded-lg overflow-hidden">
+        <div className="bg-gradient-to-br from-[var(--solarized-base2)] to-[var(--solarized-base3)] text-black">
             {/* Top section */}
             <div className="flex flex-col items-center justify-between gap-4 sm:flex-row p-6">
                 <div className="flex flex-col sm:flex-row items-center grow gap-4">
@@ -67,7 +63,8 @@ export const ContactCard = React.memo(function ContactCard({ contactCard }: IPro
             </div>
 
             {/* Bottom section */}
-            <div className="bg-gradient-to-tl from-[#002b36] to-[#586e75] text-white p-6 space-y-3 text-sm">
+            <div className="relative bg-gradient-to-tl from-[var(--solarized-base03)] to-[var(--solarized-base02)] text-white p-6 space-y-3 text-sm">
+                <div className="absolute inset-0 bg-[var(--solarized-base03)] -z-10"></div>
                 <div className="flex flex-row flex-wrap items-center justify-between gap-2">
                     <div className="left flex flex-col items-start gap-2">
                         {contactCard.email && <div className="flex items-center gap-2">
